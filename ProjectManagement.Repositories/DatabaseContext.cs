@@ -18,10 +18,6 @@ namespace ProjectManagement.Repositories
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-                //optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString);
-            }
         }
 
         public virtual DbSet<User> Users { get; set; }

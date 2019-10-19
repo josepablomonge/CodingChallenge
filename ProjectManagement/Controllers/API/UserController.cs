@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProjectManagement.Common.Dto;
 using ProjectManagement.Common.Interfaces;
@@ -10,7 +8,7 @@ using ProjectManagement.Common.Interfaces;
 namespace ProjectManagement.Controllers.API
 {
     [Produces("application/json")]
-    [Route("api/Users")]
+    [Route("api/user")]
     public class UserController : Controller
     {
         private IUserDomain _UserDomain;
@@ -21,15 +19,18 @@ namespace ProjectManagement.Controllers.API
         }
 
         [HttpGet]
-        public List<User> Get()
+        public IActionResult Get()
         {
             try
             {
-                return _UserDomain.Get();
+                
+                var userList = _UserDomain.Get();
+                return Ok(userList);
             }
             catch(Exception ex)
             {
-                throw;
+                //Log Exception
+                return StatusCode(500);
             }
         }
     }

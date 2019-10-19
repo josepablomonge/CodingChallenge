@@ -1,3 +1,36 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+
+<br />
+<div  class="col-md-6">
+    <div>
+        <select id="UserList" class="form-control"></select>
+    </div>
+</div>
+
+
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Project Id</td>
+                <td>Start Date</td>
+                <td>Time To Start</td>
+                <td>End Date</td>
+                <td>Credits</td>
+                <td>Status</td>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: project">
+            <tr>
+                <td data-bind="text: projectid"></td>
+                <td data-bind="text: startdate"></td>
+                <td data-bind="text: timetostart"></td>
+                <td data-bind="text: enddate"></td>
+                <td data-bind="text: credits"></td>
+                <td data-bind="text: status"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

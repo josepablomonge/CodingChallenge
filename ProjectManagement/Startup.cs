@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ProjectManagement.BusinessLogic;
 using ProjectManagement.Common.Interfaces;
 using ProjectManagement.Repositories;
 
@@ -24,11 +25,11 @@ namespace ProjectManagement
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
-            var connectionString = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(connectionString), ServiceLifetime.Transient);
+            services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ProjectDatabase")), ServiceLifetime.Transient);
             services.AddTransient<IUserRepository, UserRepository>();
             services.AddTransient<IProjectRepository, ProjectRepository>();
+            services.AddTransient<IUserDomain, UserDomain>();
+            services.AddTransient<IProjectDomain, ProjectDomain>();
 
             services.AddMvc();
         }
