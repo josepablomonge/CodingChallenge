@@ -7,6 +7,10 @@
   <ItemGroup>
     <PackageReference Include="BuildBundlerMinifier" Version="3.1.430" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.6" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -15,6 +19,12 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectManagement.BusinessLogic\ProjectManagement.BusinessLogic.csproj" />
+    <ProjectReference Include="..\ProjectManagement.Common\ProjectManagement.Common.csproj" />
+    <ProjectReference Include="..\ProjectManagement.Repositories\ProjectManagement.Repositories.csproj" />
   </ItemGroup>
 
 </Project>

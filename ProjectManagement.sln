@@ -3,13 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagement", "ProjectManagement\ProjectManagement.csproj", "{2CD7804A-A3C1-417D-B67A-3ED268143C72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectManagement", "ProjectManagement\ProjectManagement.csproj", "{2CD7804A-A3C1-417D-B67A-3ED268143C72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagement.BusinessLogic", "ProjectManagement.BusinessLogic\ProjectManagement.BusinessLogic.csproj", "{F7B380D6-F196-495F-B8EF-9C3C37F102B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectManagement.BusinessLogic", "ProjectManagement.BusinessLogic\ProjectManagement.BusinessLogic.csproj", "{F7B380D6-F196-495F-B8EF-9C3C37F102B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagement.BusinessLogic.Tests", "ProjectManagement.BusinessLogic.Tests\ProjectManagement.BusinessLogic.Tests.csproj", "{C08F0CC6-8B8F-417C-A841-B692A25F2DB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectManagement.BusinessLogic.Tests", "ProjectManagement.BusinessLogic.Tests\ProjectManagement.BusinessLogic.Tests.csproj", "{C08F0CC6-8B8F-417C-A841-B692A25F2DB4}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ProjectManagement.Database", "ProjectManagement.Database\ProjectManagement.Database.sqlproj", "{9A66ECA7-E4A1-4352-B0AB-E6EF4A422830}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectManagement.Common", "ProjectManagement.Common\ProjectManagement.Common.csproj", "{E1AA3D5A-94BB-4F44-ADEF-3882B4992205}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagement.Repositories", "ProjectManagement.Repositories\ProjectManagement.Repositories.csproj", "{C1FF4D42-10C0-4346-8B59-210A9CD9F612}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +39,14 @@ Global
 		{9A66ECA7-E4A1-4352-B0AB-E6EF4A422830}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A66ECA7-E4A1-4352-B0AB-E6EF4A422830}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9A66ECA7-E4A1-4352-B0AB-E6EF4A422830}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{E1AA3D5A-94BB-4F44-ADEF-3882B4992205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1AA3D5A-94BB-4F44-ADEF-3882B4992205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1AA3D5A-94BB-4F44-ADEF-3882B4992205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1AA3D5A-94BB-4F44-ADEF-3882B4992205}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1FF4D42-10C0-4346-8B59-210A9CD9F612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1FF4D42-10C0-4346-8B59-210A9CD9F612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1FF4D42-10C0-4346-8B59-210A9CD9F612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1FF4D42-10C0-4346-8B59-210A9CD9F612}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
