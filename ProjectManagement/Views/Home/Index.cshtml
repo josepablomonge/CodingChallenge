@@ -5,7 +5,10 @@
 <br />
 <div  class="col-md-6">
     <div>
-        <select id="UserList" class="form-control"></select>
+        <select class="form-control" data-bind="options: UserList,
+                       optionsText: 'userName',
+                       value: SelectedUserId,
+                       optionsCaption: '--'"></select>
     </div>
 </div>
 
@@ -22,15 +25,15 @@
                 <td>Status</td>
             </tr>
         </thead>
-        <tbody data-bind="foreach: project">
+        <tbody data-bind="foreach: ProjectList">
             <tr>
-                <td data-bind="text: projectid"></td>
-                <td data-bind="text: startdate"></td>
-                <td data-bind="text: timetostart"></td>
-                <td data-bind="text: enddate"></td>
+                <td data-bind="text: projectId"></td>
+                <td data-bind="text: startDate"></td>
+                <td data-bind="text: timeToStart"></td>
+                <td data-bind="text: endDate"></td>
                 <td data-bind="text: credits"></td>
                 <td data-bind="text: status"></td>
-            </tr>
+        </tr>
         </tbody>
     </table>
 </div>
