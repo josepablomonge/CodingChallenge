@@ -3,6 +3,9 @@
 }
 
 <br />
+<div class="alert alert-danger" data-bind="visible: showErrorMessage">
+    <strong>Error: </strong><span data-bind="text: errorMessage"></span>
+</div>
 <div  class="col-md-6">
     <div>
         <select class="form-control" data-bind="options: UserList,

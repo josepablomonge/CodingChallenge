@@ -5,11 +5,14 @@
 function AppViewModel() {
     var self = this;
 
+    self.showErrorMessage = ko.observable(false);
+    self.errorMessage = ko.observable();
     self.SelectedUserId = ko.observable();
     self.UserList = ko.observableArray();
     self.ProjectList = ko.observableArray();
 
     self.SelectedUserId.subscribe(function (selectedUser) {
+        self.showErrorMessage(false);
         $.ajax({
             url: '/api/project/?userid=' + selectedUser.id(),
             type: "GET",
@@ -19,12 +22,14 @@ function AppViewModel() {
                 self.ProjectList(mappedProject);
             },
             error: function (x) {
-                alert(x.statusText);
+                self.errorMessage(x.statusText);
+                self.showErrorMessage(true);
             }
         });
     });
 
     self.GetUsers = function () {
+        self.showErrorMessage(false);
         $.ajax({
             type: "GET",
             dataType: "json",
@@ -33,8 +38,9 @@ function AppViewModel() {
                 var mappedUser = $.map(data, function (user) { return new UserViewModel(user); });
                 self.UserList(mappedUser);
             },
-            error: function () {
-
+            error: function (x) {
+                self.errorMessage(x.statusText);
+                self.showErrorMessage(true);
             }
         });
     };
@@ -53,7 +59,7 @@ function ProjectViewModel(data) {
     self.projectId = ko.observable(data.projectId);
     self.credits = ko.observable(data.credits);
     self.status = ko.observable(data.status);
-    self.startDate = ko.observable(data.startDate);
-    self.endDate = ko.observable(data.endDate);
+    self.startDate = ko.observable(moment(data.startDate).format('MM-DD-YYYY'));
+    self.endDate = ko.observable(moment(data.endDate).format('MM-DD-YYYY'));
     self.timeToStart = ko.observable(data.timeToStart);
 }
