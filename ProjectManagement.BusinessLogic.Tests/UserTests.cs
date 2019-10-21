@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using ProjectManagement.Common.Dto;
-using ProjectManagement.Common.Interfaces;
+using ProjectManagement.Common.Interfaces.Repositories;
 using System.Collections.Generic;
 
 namespace ProjectManagement.BusinessLogic.Tests

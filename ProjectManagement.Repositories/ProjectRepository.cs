@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProjectManagement.Common.Dto;
-using ProjectManagement.Common.Interfaces;
+using ProjectManagement.Common.Interfaces.Repositories;
 using System.Collections.Generic;
 using System.Linq;
 

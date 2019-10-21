@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
-using ProjectManagement.Common.Dto;
-using ProjectManagement.Common.Interfaces;
+using ProjectManagement.Common.Interfaces.DomainLogic;
 
 namespace ProjectManagement.Controllers.API
 {

@@ -1,7 +1,7 @@
 ﻿using ProjectManagement.Common.Dto;
 using System.Collections.Generic;
 
-namespace ProjectManagement.Common.Interfaces
+namespace ProjectManagement.Common.Interfaces.Repositories
 {
     public interface IUserRepository
     {
